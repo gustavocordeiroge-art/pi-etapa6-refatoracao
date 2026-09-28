@@ -1,0 +1,33 @@
+ROTEIRO PARA CRIAR O REPOSITÓRIO E GERAR OS COMMITS
+(1) Crie um repositório vazio no github.com (ex.: pi-etapa6-refatoracao), sem README.
+(2) No terminal, dentro da pasta que contém SistemaClinicaWeb e desktop-legado:
+
+git init
+git branch -M main
+git remote add origin https://github.com/SEU_USUARIO/pi-etapa6-refatoracao.git
+
+git add desktop-legado
+git commit -m "Adiciona código desktop legado (FormPacienteLegado) como ponto de partida"
+
+git add SistemaClinicaWeb/pom.xml SistemaClinicaWeb/.gitignore SistemaClinicaWeb/src/main/java/br/com/clinica/model SistemaClinicaWeb/src/main/java/br/com/clinica/exception
+git commit -m "Cria projeto Maven SistemaClinicaWeb e entidades do modelo"
+
+git add SistemaClinicaWeb/src/main/java/br/com/clinica/util SistemaClinicaWeb/src/main/java/br/com/clinica/validation
+git commit -m "Extrai validações para classes Strategy (validation)"
+
+git add SistemaClinicaWeb/src/main/java/br/com/clinica/repository
+git commit -m "Extrai acesso a dados para interfaces de repositório e implementações"
+
+git add SistemaClinicaWeb/src/main/java/br/com/clinica/service
+git commit -m "Cria PacienteService e ConsultaService com injeção de dependência"
+
+git add SistemaClinicaWeb/src/main/java/br/com/clinica/Main.java
+git commit -m "Adiciona testes no main() e raiz de composição"
+
+git add SistemaClinicaWeb/README.md Documento_de_Projeto.docx Relatorio_Etapa6.docx
+git commit -m "Adiciona documento de projeto, relatório e README"
+
+git push -u origin main
+
+(3) Tire os prints pedidos no relatório (página do repositório, aba Commits, estrutura de pastas) e cole no relatório.
+Obs.: o Java não compila antes do último passo se você commitar em partes; isso não importa para o histórico, mas confira o projeto completo antes do push.

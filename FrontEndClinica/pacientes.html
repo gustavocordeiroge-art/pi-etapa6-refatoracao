@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pacientes - Clínica</title><link rel="stylesheet" href="css/estilo.css"></head>
+<body data-pagina="pacientes">
+<header><h1>Clínica Saúde Integrada</h1><nav>
+<a href="index.html" >Início</a><a href="pacientes.html" class="ativo">Pacientes</a><a href="consultas.html" >Consultas</a></nav></header>
+<main>
+<section class="card"><h2>Novo paciente</h2><div id="aviso" role="status"></div>
+<form id="formPaciente" class="grid" novalidate>
+<label>Nome completo<input name="nome" type="text" placeholder="Ana Souza"><span class="erro"></span></label>
+<label>CPF<input name="cpf" type="text" placeholder="000.000.000-00" maxlength="14"><span class="erro"></span></label>
+<label>Data de nascimento<input name="nascimento" type="date"><span class="erro"></span></label>
+<label>Telefone<input name="telefone" type="text" placeholder="(51) 99999-1234" maxlength="15"><span class="erro"></span></label>
+<div class="acoes"><button type="submit">Salvar</button><button type="reset" class="sec">Limpar</button></div>
+</form></section>
+<section class="card"><h2>Pacientes cadastrados</h2>
+<table id="tabela"><thead><tr><th>Nome</th><th>CPF</th><th>Idade</th><th>Desconto na consulta</th><th>Ações</th></tr></thead><tbody></tbody></table></section>
+</main><script src="js/validacoes.js"></script><script src="js/app.js"></script></body></html>

@@ -1,0 +1,25 @@
+:root{--azul:#1f5f8b;--claro:#eaf2f8;--erro:#c0392b;--ok:#1e8449;--borda:#cfd8dc}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f5f7fa;color:#263238}
+header{background:var(--azul);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:.8rem 1.5rem;flex-wrap:wrap}
+header h1{margin:0;font-size:1.3rem}
+nav a{color:#fff;text-decoration:none;margin-left:1rem;padding:.3rem .6rem;border-radius:4px}
+nav a:hover,nav a.ativo{background:rgba(255,255,255,.25)}
+main{max-width:960px;margin:1.5rem auto;padding:0 1rem}
+.card{background:#fff;border:1px solid var(--borda);border-radius:8px;padding:1.2rem;margin-bottom:1.2rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem}
+label{display:flex;flex-direction:column;font-weight:bold;font-size:.9rem}
+input,select{margin-top:.3rem;padding:.5rem;border:1px solid var(--borda);border-radius:4px;font-size:1rem}
+input.invalido,select.invalido{border-color:var(--erro);background:#fdecea}
+.erro{color:var(--erro);font-size:.8rem;min-height:1rem;font-weight:normal}
+button{background:var(--azul);color:#fff;border:0;padding:.55rem 1.1rem;border-radius:4px;cursor:pointer;font-size:1rem}
+button.sec{background:#78909c}button.perigo{background:var(--erro);padding:.3rem .7rem;font-size:.85rem}
+.acoes{grid-column:1/-1;display:flex;gap:.6rem}
+.aviso{margin-bottom:.8rem;padding:.5rem .8rem;border-radius:4px;display:none}
+.aviso.ok{display:block;background:#e8f5e9;color:var(--ok)}.aviso.falha{display:block;background:#fdecea;color:var(--erro)}
+table{width:100%;border-collapse:collapse}th,td{padding:.55rem;border-bottom:1px solid var(--borda);text-align:left}
+th{background:var(--claro)}
+.cartoes{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.numero{font-size:2.2rem;color:var(--azul);font-weight:bold}
+.tag{padding:.15rem .5rem;border-radius:10px;font-size:.8rem;background:var(--claro)}.tag.CANCELADA{background:#fdecea;color:var(--erro)}
+@media(max-width:600px){nav a{margin:.3rem .3rem 0 0}table{font-size:.85rem}}

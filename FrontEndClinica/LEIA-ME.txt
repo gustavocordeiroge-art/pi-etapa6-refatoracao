@@ -1,0 +1,4 @@
+Front-end do Sistema de Gestão de Clínica (Etapa 8 do PI).
+Abra index.html no navegador. Wireframes em wireframes/wireframes.html.
+css/estilo.css = estilos | js/validacoes.js = regras de validação | js/app.js = comportamento das páginas.
+Sem back-end: os dados ficam no localStorage do navegador.
